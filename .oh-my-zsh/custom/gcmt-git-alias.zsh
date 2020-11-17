@@ -96,13 +96,13 @@ function gcmt() {
     TARGET_TYPE=$(find_type $BRANCH_TYPE_SEPARATOR $MESSAGE_TYPE ${TYPES[@]})
 
     if [ -n "${TARGET_TYPE}" ]; then
-      echo "$TARGET_TYPE: $TICKET $MESSAGE_TEXT"
+      gcmsg "$TARGET_TYPE: $TICKET $MESSAGE_TEXT"
     else
       print_invalid_type_shortcut $MESSAGE_TYPE
       $COMMAND "--help"
     fi
 
   else
-    echo "$BRANCH_TYPE: $TICKET $MESSAGE"
+    gcmsg "$BRANCH_TYPE: $TICKET $MESSAGE"
   fi
 }
