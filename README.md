@@ -1,4 +1,4 @@
-# Oh-My-Zsh Conventional Commit Message Plugin
+# Conventional Commit Message plugin for zsh
 
 ## Install with Oh My Zsh
 
